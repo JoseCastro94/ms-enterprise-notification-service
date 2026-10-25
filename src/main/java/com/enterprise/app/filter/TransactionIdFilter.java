@@ -3,10 +3,10 @@ package com.enterprise.app.filter;
 import static com.enterprise.app.constants.ConstantsApp.HEADER_TRANSACTION_ID;
 import static com.enterprise.app.constants.ConstantsApp.ID_TRANSACTION;
 
-import com.enterprise.app.exception.ErrorCodes;
+import com.enterprise.app.exception.codes.ErrorCodes;
 import com.enterprise.app.constants.ConstantsApp;
-import com.enterprise.app.log.TransactionLogContext;
-import com.enterprise.app.model.dto.errors.ErrorResponse;
+import com.enterprise.app.context.TransactionLogContext;
+import com.enterprise.app.exception.responses.ErrorResponse;
 import jakarta.ws.rs.container.ContainerRequestContext;
 import jakarta.ws.rs.container.ContainerRequestFilter;
 import jakarta.ws.rs.container.ContainerResponseContext;

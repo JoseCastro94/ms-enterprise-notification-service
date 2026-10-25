@@ -1,13 +1,13 @@
 package com.enterprise.app.business;
 
 import com.enterprise.app.config.NotificationProperties;
-import com.enterprise.app.log.TransactionLogContext;
+import com.enterprise.app.context.TransactionLogContext;
 import com.enterprise.app.model.dto.EmailAttachmentDto;
 import com.enterprise.app.model.dto.EmailNotificationRequest;
 import com.enterprise.app.model.dto.EmailRecipientDto;
 import com.enterprise.app.model.dto.RecipientsDto;
 import com.enterprise.app.model.enums.ContentType;
-import com.enterprise.app.util.AttachmentDecoder;
+import com.enterprise.app.utils.AttachmentDecoder;
 import io.quarkus.mailer.Mail;
 import io.quarkus.mailer.Mailer;
 import jakarta.enterprise.context.ApplicationScoped;

@@ -1,4 +1,4 @@
-package com.enterprise.app.model.dto.errors;
+package com.enterprise.app.exception.responses;
 
 import java.time.OffsetDateTime;
 import java.util.List;

@@ -2,7 +2,7 @@ package com.enterprise.app.resource;
 
 import com.enterprise.app.business.EmailNotificationService;
 import com.enterprise.app.model.dto.EmailNotificationRequest;
-import com.enterprise.app.model.dto.NotificationResponse;
+import com.enterprise.app.model.dto.ResponseDto;
 import io.smallrye.common.annotation.Blocking;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
@@ -14,6 +14,8 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
+
+import java.time.OffsetDateTime;
 
 @Path("/api/v1/notificaciones")
 @Consumes(MediaType.APPLICATION_JSON)
@@ -36,6 +38,13 @@ public class NotificationResource {
     @Operation(summary = "Enviar correo electrónico")
     public Response send(@Valid EmailNotificationRequest request) {
         notificationService.send(request);
-        return Response.accepted(new NotificationResponse("Correo enviado correctamente.")).build();
+
+        ResponseDto response = ResponseDto.builder()
+                .timestamp(OffsetDateTime.now())
+                .status(Response.Status.ACCEPTED.getStatusCode())
+                .message("Correo enviado correctamente.")
+                .build();
+
+        return Response.accepted(response).build();
     }
 }

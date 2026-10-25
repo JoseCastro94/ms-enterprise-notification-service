@@ -1,4 +1,4 @@
-package com.enterprise.app.exception;
+package com.enterprise.app.exception.mappers;
 
 import jakarta.validation.ConstraintViolationException;
 import jakarta.ws.rs.core.Response;

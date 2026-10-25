@@ -1,6 +1,6 @@
-package com.enterprise.app.util;
+package com.enterprise.app.utils;
 
-import com.enterprise.app.exception.BusinessException;
+import com.enterprise.app.exception.exceptions.BusinessException;
 import java.util.Base64;
 import lombok.experimental.UtilityClass;
 

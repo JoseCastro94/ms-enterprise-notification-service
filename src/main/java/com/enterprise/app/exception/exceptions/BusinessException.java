@@ -1,4 +1,6 @@
-package com.enterprise.app.exception;
+package com.enterprise.app.exception.exceptions;
+
+import com.enterprise.app.exception.codes.ErrorCodes;
 
 public class BusinessException extends RuntimeException {
     private final ErrorCodes code;

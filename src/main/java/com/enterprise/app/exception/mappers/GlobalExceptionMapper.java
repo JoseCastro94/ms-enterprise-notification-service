@@ -1,10 +1,12 @@
-package com.enterprise.app.exception;
+package com.enterprise.app.exception.mappers;
 
 import static com.enterprise.app.constants.ConstantsApp.ZONA_LIMA;
 
-import com.enterprise.app.log.TransactionLogContext;
-import com.enterprise.app.model.dto.errors.ErrorDetalle;
-import com.enterprise.app.model.dto.errors.ErrorResponse;
+import com.enterprise.app.context.TransactionLogContext;
+import com.enterprise.app.exception.exceptions.BusinessException;
+import com.enterprise.app.exception.codes.ErrorCodes;
+import com.enterprise.app.exception.responses.ErrorDetalle;
+import com.enterprise.app.exception.responses.ErrorResponse;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.ws.rs.WebApplicationException;
