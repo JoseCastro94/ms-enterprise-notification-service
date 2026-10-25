@@ -1,0 +1,18 @@
+package com.enterprise.app.model.dto.errors;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ErrorDetalle {
+    private String field;
+    private String message;
+    private String code;
+}
